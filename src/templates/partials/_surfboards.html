@@ -1,0 +1,24 @@
+{% import "../data/data.html" as list %}
+<div class="surfboards">
+    <div class="container">
+        <div class="block-title">
+            <span class="block-title__up">shop</span>
+            <span class="block-title__name">Surfboards</span>
+        </div>
+        <div class="surfboards__list">
+            {% for item in list.surfboards__list %}
+                <div class="surfboard">
+                    <img class="surfboard__img" src="{{item.img}}">
+                    <div class="surfboard__description">
+                        <span class="surfboard__kind">{{item.kind}}</span>
+                        <span class="surfboard__model">{{item.model}}</span>
+                        <div class="surfboard__buy">
+                            <span class="surfboard__price">{{item.price}}</span>
+                            <a href="#" class="surfboard__btn">buy</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
